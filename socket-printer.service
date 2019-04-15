@@ -1,0 +1,12 @@
+[Unit]
+Description=Perl Socket for Printer Service
+After=multi-user.target
+
+[Service]
+Type=simple
+User=root
+ExecStart=/bin/perl /usr/local/bin/socket-printer.pl
+Restart=on-abort
+
+[Install]
+WantedBy=multi-user.target
